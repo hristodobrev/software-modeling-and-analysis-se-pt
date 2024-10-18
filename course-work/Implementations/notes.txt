@@ -1,0 +1,13 @@
+user - id, title, first name, last name, phone, email, rating, badges
+question - id, title, description, views, upvotes, downvotes, date, correct answer, tags, user
+answer - id, text, upvotes, downvotes, date, question, user
+tag - id, name, rating earn, questions
+badge - id, name, required rating, users
+saveList - id, name, user, questions
+
+question tag - question id, tag id
+user badge - user id, badge id
+
+when question is updated to answered (answerId != 0) increase the question user rating by the tags applied to that question
+when answer is being inserted increase the answer user rating by 5
+when user rating is being updated, check if a badge should be added to that user
